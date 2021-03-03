@@ -7,5 +7,8 @@
         "name": "Stefan Fisk",
         "email": "contact@stefanfisk.com"
     },
-    "license": "ISC"
+    "license": "ISC",
+    "scripts": {
+        "watch": "echo 'Watching...'; exec sleep infinity"
+    }
 }

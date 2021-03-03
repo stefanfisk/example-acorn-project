@@ -1,0 +1,60 @@
+version: "3.7"
+
+services:
+    nginx:
+        build:
+            context: ./services/nginx
+            args:
+                PUID: ${PUID}
+                PGID: ${PGID}
+        environment:
+            WP_HOST:
+            MAILHOG_HOST:
+        restart: unless-stopped
+        volumes:
+            - ../:/srv/app
+
+    wordpress:
+        build:
+            context: ./services/wordpress
+            args:
+                PUID: ${PUID}
+                PGID: ${PGID}
+        restart: unless-stopped
+        environment:
+            XDEBUG_CONFIG:
+        volumes:
+        - ../:/srv/app
+
+    mariadb:
+        build:
+            context: ./services/mariadb
+            args:
+                PUID: ${PUID}
+                PGID: ${PGID}
+        restart: unless-stopped
+        environment:
+            MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+            MYSQL_DATABASE: ${DB_NAME}
+            MYSQL_USER:  ${DB_USER}
+            MYSQL_PASSWORD: ${DB_PASSWORD}
+        volumes:
+            - ../:/srv/app
+            - mariadb_data:/var/lib/mysql
+
+    build:
+        build:
+            context: ./services/build
+            args:
+                PUID: ${PUID}
+                PGID: ${PGID}
+        restart: unless-stopped
+        volumes:
+            - ../:/srv/app
+
+    mailhog:
+        image: mailhog/mailhog
+        restart: unless-stopped
+
+volumes:
+    mariadb_data:

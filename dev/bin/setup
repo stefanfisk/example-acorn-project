@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+set -e
+
+cd $(dirname "$0")
+
+if [[ ! -f "../../.env" ]]; then
+    cp ../../.env.dev ../../.env
+
+    echo "Copied .env.dev to .env"
+else
+    echo ".env already exists"
+fi
+
+if [[ ! -f "../../.config.php" ]]; then
+    cp ../../.config.dev.php ../../.config.php
+
+    echo "Copied .config.dev.php to .config.php"
+else
+    echo ".config.php already exists"
+fi
+
+if ! grep -q wordpress.test /etc/hosts; then
+    read -p "Do you want to add the required entries to /etc/hosts? [y/N] " -n 1 -r
+    echo
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        sudo sh -c "echo >> /etc/hosts"
+        sudo sh -c "echo '# WordPress Dev' >> /etc/hosts"
+        sudo sh -c "echo >> /etc/hosts"
+        sudo sh -c "echo 127.0.0.1	wordpress.test >> /etc/hosts"
+        sudo sh -c "echo 127.0.0.1	mailhog.test >> /etc/hosts"
+
+        echo "Added entries to /etc/hosts"
+    fi
+else
+    echo "wordpress.test already exists in /etc/hosts"
+fi

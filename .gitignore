@@ -2,6 +2,12 @@
 
 .env
 
+# Dev environment
+
+/.vscode/*
+!/.vscode/launch.json
+/dev/docker-compose.override.yml
+
 # Deps
 
 /node_modules/

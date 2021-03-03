@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+set -e
+
+cd $(dirname "$0")/..
+
+# docker-compose does not support whitespace in --env-file variables.
+set -o allexport
+source ../.env
+set +o allexport
+
+export PUID=${PUID:-$UID}
+export PGID=${PGID:-$(id -g)}
+
+docker_files=(
+    --file docker-compose.yml
+)
+
+if [ "$(uname -s)" == "Darwin" ]; then
+    docker_files+=(--file docker-compose.macos.yml)
+fi
+
+if test -f "docker-compose.override.yml"; then
+    docker_files+=(--file docker-compose.override.yml)
+fi
+
+docker-compose "${docker_files[@]}" "$@"

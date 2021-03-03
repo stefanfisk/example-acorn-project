@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -e
+
+cd $(dirname "$0")
+
+source ../../.env
+
+./docker-compose exec -T --user www-data wordpress ./vendor/bin/wp "$@"
