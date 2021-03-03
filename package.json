@@ -1,0 +1,11 @@
+{
+    "name": "example-acorn-project",
+    "version": "1.0.0",
+    "description": "",
+    "private": true,
+    "author": {
+        "name": "Stefan Fisk",
+        "email": "contact@stefanfisk.com"
+    },
+    "license": "ISC"
+}

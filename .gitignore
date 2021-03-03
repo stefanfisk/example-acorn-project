@@ -1,0 +1,8 @@
+# Config
+
+.env
+
+# Deps
+
+/node_modules/
+/vendor/

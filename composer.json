@@ -1,0 +1,14 @@
+{
+    "name": "stefanfisk/example-acorn-project",
+    "description": "",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Stefan Fisk",
+            "email": "contact@stefanfisk.com"
+        }
+    ],
+    "config": {
+        "sort-packages": true
+    }
+}
