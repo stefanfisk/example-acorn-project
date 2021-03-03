@@ -1,5 +1,6 @@
 # Config
 
+.config.php
 .env
 
 # Dev environment
@@ -12,3 +13,9 @@
 
 /node_modules/
 /vendor/
+
+# Content
+
+/public/content/languages
+/public/content/upgrade
+/public/content/uploads
