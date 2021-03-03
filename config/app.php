@@ -142,6 +142,7 @@ return [
          */
         App\Providers\ThemeServiceProvider::class,
         App\View\ViewServiceProvider::class,
+        App\Providers\AssetsServiceProvider::class,
 
     ],
 

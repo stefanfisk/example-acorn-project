@@ -9,6 +9,13 @@
     },
     "license": "ISC",
     "scripts": {
-        "watch": "echo 'Watching...'; exec sleep infinity"
+        "watch": "mix watch"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "bootstrap": "^4.6.0",
+        "laravel-mix": "^6.0.13",
+        "postcss": "^8.2.6",
+        "postcss-import": "^14.0.0"
     }
 }
