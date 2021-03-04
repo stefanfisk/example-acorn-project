@@ -1,6 +1,6 @@
 <x-layouts.app>
     <div class="container">
-        <h1 class="display-1">@php(the_title())</h1>
+        <h1 class="display-1">Front Page!!!</h1>
     </div>
 
     <x-organisms.loop />
