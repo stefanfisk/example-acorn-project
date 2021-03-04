@@ -11,9 +11,11 @@
     "scripts": {
         "watch": "mix watch",
         "lint": "run-p --continue-on-error --print-label --silent lint:*",
+        "lint:css": "stylelint .",
         "lint:js": "eslint .",
         "lint:php": "./vendor/bin/phpcs -s .",
         "fix": "run-p --continue-on-error --print-label --silent fix:*",
+        "fix:css": "stylelint --fix .",
         "fix:js": "eslint --fix .",
         "fix:php": "./vendor/bin/phpcbf -s ."
     },
@@ -35,6 +37,10 @@
         "npm-run-all": "^4.1.5",
         "postcss": "^8.2.6",
         "postcss-import": "^14.0.0",
-        "prettier": "^2.2.1"
+        "prettier": "^2.2.1",
+        "stylelint": "^13.11.0",
+        "stylelint-config-prettier": "^8.0.2",
+        "stylelint-config-recommended": "^3.0.0",
+        "stylelint-prettier": "^1.2.0"
     }
 }

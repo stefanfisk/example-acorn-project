@@ -1,0 +1,14 @@
+# without this, files without extensions will be included.
+*
+!/**/
+
+/public/content/plugins
+/public/content/themes/app/dist
+/public/content/themes/twentytwentyone
+/public/content/uploads
+/public/wp
+
+/node_modules
+/vendor
+
+!*.css

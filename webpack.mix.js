@@ -5,7 +5,7 @@ const mix = require('laravel-mix');
 mix.options({ clearConsole: false });
 mix.setPublicPath('./public/content/themes/app/dist');
 
-mix.css('resources/css/app.css', 'css');
+mix.css('resources/css/app.css', 'css').css('resources/css/editor.css', 'css');
 
 mix.js('resources/js/app.js', 'js')
     .autoload({ jquery: ['$', 'window.jQuery'] })
