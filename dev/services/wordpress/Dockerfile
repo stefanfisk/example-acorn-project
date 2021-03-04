@@ -59,4 +59,4 @@ RUN chown -R www-data:www-data /var/www
 # Done
 
 WORKDIR /srv/app
-CMD su www-data --shell /bin/sh --command "composer install" && php-fpm
+CMD su www-data --shell /bin/sh --command "composer install" && exec php-fpm
