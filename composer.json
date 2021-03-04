@@ -16,7 +16,11 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/"
-        }
+        },
+        "files": [
+            "app/helpers.php",
+            "app/View/helpers.php"
+        ]
     },
     "require": {
         "roots/acorn": "^1.1",

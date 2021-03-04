@@ -81,4 +81,20 @@ return [
     'directives' => [
         'asset'  => Roots\Acorn\Assets\AssetDirective::class,
     ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | View helper functions
+    |--------------------------------------------------------------------------
+    |
+    | These functions are made available to all viewss
+    |
+    */
+    'helpers' => [
+        'html' => 'App\View\html',
+        'push_postdata' => 'App\push_postdata',
+        'pop_postdata' => 'App\pop_postdata',
+        'reset_postdata' => 'App\reset_postdata',
+    ],
+
 ];
