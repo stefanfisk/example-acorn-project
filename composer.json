@@ -23,6 +23,7 @@
         "vlucas/phpdotenv": "^4"
     },
     "require-dev": {
-        "filp/whoops": "^2.9"
+        "filp/whoops": "^2.9",
+        "wp-cli/wp-cli-bundle": "^2.4"
     }
 }
