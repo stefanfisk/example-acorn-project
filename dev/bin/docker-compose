@@ -9,15 +9,18 @@ set -o allexport
 source ../.env
 set +o allexport
 
-export PUID=${PUID:-$UID}
-export PGID=${PGID:-$(id -g)}
-
 docker_files=(
     --file docker-compose.yml
 )
 
 if [ "$(uname -s)" == "Darwin" ]; then
+    export PUID=${PUID:-1000}
+    export PGID=${PGID:-1000}
+
     docker_files+=(--file docker-compose.macos.yml)
+else
+    export PUID=${PUID:-$UID}
+    export PGID=${PGID:-$(id -g)}
 fi
 
 if test -f "docker-compose.override.yml"; then
