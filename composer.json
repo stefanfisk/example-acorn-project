@@ -27,7 +27,12 @@
         "vlucas/phpdotenv": "^4"
     },
     "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "*",
         "filp/whoops": "^2.9",
-        "wp-cli/wp-cli-bundle": "^2.4"
+        "laminas/laminas-coding-standard": "*",
+        "phpcompatibility/phpcompatibility-wp": "*",
+        "sirbrillig/phpcs-variable-analysis": "^3.0",
+        "wp-cli/wp-cli-bundle": "^2.4",
+        "wp-coding-standards/wpcs": "*"
     }
 }

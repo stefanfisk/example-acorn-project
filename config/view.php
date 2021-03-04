@@ -14,7 +14,6 @@ return [
     | an array of paths that should be checked for your views.
     |
     */
-
     'paths' => [
         get_theme_file_path('/resources/views'),
         get_parent_theme_file_path('/resources/views'),
@@ -31,7 +30,6 @@ return [
     | directory. However, as usual, you are free to change this value.
     |
     */
-
     'compiled' => storage_path('framework/views'),
 
     /*
@@ -45,7 +43,6 @@ return [
     | will display both.
     |
     */
-
     'debug' => false,
 
     /*
@@ -59,7 +56,6 @@ return [
     | A use case might be including views from within a plugin folder.
     |
     */
-
     'namespaces' => [
         /*
          | Given the below example, in your views use something like:
@@ -77,9 +73,8 @@ return [
     | with camelCase & dot notation.
     |
     */
-
     'directives' => [
-        'asset'  => Roots\Acorn\Assets\AssetDirective::class,
+        'asset' => Roots\Acorn\Assets\AssetDirective::class,
     ],
 
     /*
@@ -91,10 +86,9 @@ return [
     |
     */
     'helpers' => [
-        'html' => 'App\View\html',
-        'push_postdata' => 'App\push_postdata',
-        'pop_postdata' => 'App\pop_postdata',
+        'html'           => 'App\View\html',
+        'push_postdata'  => 'App\push_postdata',
+        'pop_postdata'   => 'App\pop_postdata',
         'reset_postdata' => 'App\reset_postdata',
     ],
-
 ];

@@ -14,7 +14,6 @@ return [
     | based disks are available to your application. Just store away!
     |
     */
-
     'default' => env('FILESYSTEM_DRIVER', 'local'),
 
     /*
@@ -29,38 +28,31 @@ return [
     | Supported Drivers: "local", "ftp", "sftp", "s3"
     |
     */
-
     'disks' => [
-
-        'local' => [
+        'local'     => [
             'driver' => 'local',
-            'root' => WP_CONTENT_DIR,
+            'root'   => WP_CONTENT_DIR,
         ],
-
         'wordpress' => [
-            'driver' => 'local',
-            'root' => ABSPATH,
-            'url' => site_url(),
+            'driver'     => 'local',
+            'root'       => ABSPATH,
+            'url'        => site_url(),
             'visibility' => 'public',
         ],
-
-        'theme' => [
-            'driver' => 'local',
-            'root' => get_theme_file_path(),
-            'url' => get_theme_file_uri(),
+        'theme'     => [
+            'driver'     => 'local',
+            'root'       => get_theme_file_path(),
+            'url'        => get_theme_file_uri(),
             'visibility' => 'public',
         ],
-
-        's3' => [
-            'driver' => 's3',
-            'key' => env('AWS_ACCESS_KEY_ID'),
-            'secret' => env('AWS_SECRET_ACCESS_KEY'),
-            'region' => env('AWS_DEFAULT_REGION'),
-            'bucket' => env('AWS_BUCKET'),
-            'url' => env('AWS_URL'),
+        's3'        => [
+            'driver'   => 's3',
+            'key'      => env('AWS_ACCESS_KEY_ID'),
+            'secret'   => env('AWS_SECRET_ACCESS_KEY'),
+            'region'   => env('AWS_DEFAULT_REGION'),
+            'bucket'   => env('AWS_BUCKET'),
+            'url'      => env('AWS_URL'),
             'endpoint' => env('AWS_ENDPOINT'),
         ],
-
     ],
-
 ];

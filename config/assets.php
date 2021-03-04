@@ -12,7 +12,6 @@ return [
     | authority of your application's assets to the theme.
     |
     */
-
     'default' => 'theme',
 
     /*
@@ -30,13 +29,12 @@ return [
     | Note: We will add first-party support for more strategies in the future.
     |
     */
-
     'manifests' => [
         'theme' => [
             'strategy' => 'relative',
-            'path' => get_theme_file_path('/dist'),
-            'uri' => get_theme_file_uri('/dist'),
+            'path'     => get_theme_file_path('/dist'),
+            'uri'      => get_theme_file_uri('/dist'),
             'manifest' => get_theme_file_path('/dist/mix-manifest.json'),
-        ]
-    ]
+        ],
+    ],
 ];

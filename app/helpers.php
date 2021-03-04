@@ -2,6 +2,10 @@
 
 namespace App;
 
+use function array_pop;
+use function array_push;
+use function end;
+
 /**
  * Pushes a post to the top of the post data stack.
  *

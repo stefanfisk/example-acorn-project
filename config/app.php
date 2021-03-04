@@ -14,7 +14,6 @@ return [
     | any other location as required by the application or its packages.
     |
     */
-
     'name' => env('APP_NAME', get_bloginfo('name')),
 
     /*
@@ -27,7 +26,6 @@ return [
     | services the application utilizes. Set this in your ".env" file.
     |
     */
-
     'env' => wp_get_environment_type(),
 
     /*
@@ -40,7 +38,6 @@ return [
     | application. If disabled, a simple generic error page is shown.
     |
     */
-
     'debug' => WP_DEBUG,
 
     /*
@@ -53,7 +50,6 @@ return [
     | ahead and set this to a sensible default for you out of the box.
     |
     */
-
     'timezone' => get_option('timezone_string', 'UTC'),
 
     /*
@@ -66,7 +62,6 @@ return [
     | global namespace.
     |
     */
-
     'globals' => false,
 
     /*
@@ -79,7 +74,6 @@ return [
     | to any of the locales which will be supported by the application.
     |
     */
-
     'locale' => get_locale(),
 
     /*
@@ -92,7 +86,6 @@ return [
     | the language folders that are provided through your application.
     |
     */
-
     'fallback_locale' => 'en',
 
     /*
@@ -105,7 +98,6 @@ return [
     | this array to grant expanded functionality to your applications.
     |
     */
-
     'providers' => [
 
         /*
@@ -143,7 +135,6 @@ return [
         App\Providers\ThemeServiceProvider::class,
         App\View\ViewServiceProvider::class,
         App\Providers\AssetsServiceProvider::class,
-
     ],
 
     /*
@@ -156,7 +147,6 @@ return [
     | the aliases are "lazy" loaded so they don't hinder performance.
     |
     */
-
     'aliases' => [
 
         // 'App' => Illuminate\Support\Facades\App::class,
@@ -195,7 +185,5 @@ return [
         // 'URL' => Illuminate\Support\Facades\URL::class,
         // 'Validator' => Illuminate\Support\Facades\Validator::class,
         // 'View' => Illuminate\Support\Facades\View::class,
-
     ],
-
 ];

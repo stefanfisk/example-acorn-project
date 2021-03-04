@@ -9,7 +9,11 @@
     },
     "license": "ISC",
     "scripts": {
-        "watch": "mix watch"
+        "watch": "mix watch",
+        "lint": "run-p --continue-on-error --print-label --silent lint:*",
+        "lint:php": "./vendor/bin/phpcs -s .",
+        "fix": "run-p --continue-on-error --print-label --silent fix:*",
+        "fix:php": "./vendor/bin/phpcbf -s ."
     },
     "dependencies": {},
     "devDependencies": {

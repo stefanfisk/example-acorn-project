@@ -34,6 +34,7 @@ define('DB_HOST', env('DB_HOST') ?? 'localhost');
 define('DB_NAME', env('DB_NAME'));
 define('DB_USER', env('DB_USER'));
 define('DB_PASSWORD', env('DB_PASSWORD'));
+// phpcs:ignore VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable, WebimpressCodingStandard.NamingConventions.ValidVariableName.NotCamelCaps
 $table_prefix = env('DB_TABLE_PREFIX') ?? 'wp_';
 
 /*

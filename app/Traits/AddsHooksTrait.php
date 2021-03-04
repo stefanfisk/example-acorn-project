@@ -30,13 +30,13 @@ trait AddsHooksTrait
         }
 
         if (! method_exists($this, $method)) {
-            throw new InvalidArgumentException(sprintf("%s::%s() does not exist.", static::class, $method));
+            throw new InvalidArgumentException(sprintf('%s::%s() does not exist.', static::class, $method));
         }
 
         $reflectionMethod = new ReflectionMethod(static::class, $method);
 
         if (! $reflectionMethod->isPublic()) {
-            throw new InvalidArgumentException(sprintf("%s::%s() is not public.", static::class, $method));
+            throw new InvalidArgumentException(sprintf('%s::%s() is not public.', static::class, $method));
         }
 
         if (-1 === $acceptedArgs) {
@@ -63,13 +63,13 @@ trait AddsHooksTrait
         }
 
         if (! method_exists($this, $method)) {
-            throw new InvalidArgumentException(sprintf("%s::%s() does not exist.", static::class, $method));
+            throw new InvalidArgumentException(sprintf('%s::%s() does not exist.', static::class, $method));
         }
 
         $reflectionMethod = new ReflectionMethod(static::class, $method);
 
         if (! $reflectionMethod->isPublic()) {
-            throw new InvalidArgumentException(sprintf("%s::%s() is not public.", static::class, $method));
+            throw new InvalidArgumentException(sprintf('%s::%s() is not public.', static::class, $method));
         }
 
         if (-1 === $acceptedArgs) {
