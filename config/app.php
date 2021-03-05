@@ -132,9 +132,10 @@ return [
         /*
          * Application Service Providers...
          */
+        App\Providers\AssetsServiceProvider::class,
+        App\Providers\BlockEditorServiceProvider::class,
         App\Providers\ThemeServiceProvider::class,
         App\View\ViewServiceProvider::class,
-        App\Providers\AssetsServiceProvider::class,
     ],
 
     /*
