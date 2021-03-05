@@ -1,7 +1,5 @@
 <x-layouts.app>
     <x-organisms.single-header />
 
-    <div class="container">
-        @php(the_content())
-    </div>
+    @php(the_content())
 </x-layouts.app>

@@ -3,12 +3,12 @@
     'image' => get_post_thumbnail_id(),
 ])
 
-<header class="container">
+<header>
     <x-atoms.attachment-image
-        class="img-fluid"
+        class="w-full"
         :image="$image"
         :size="full"
     />
 
-    <h1>{{ $title }}</h1>
+    <x-atoms.page-heading>{{ $title }}</x-atoms.page-heading>
 </header>

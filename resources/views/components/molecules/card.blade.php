@@ -1,23 +1,40 @@
 @props([
     'image',
+    'meta',
     'title',
     'text',
     'link',
-    'linkText' => __('Read more', 'app'),
 ])
 
-<div class="card">
-    <x-atoms.attachment-image
-        class="card-img-top"
-        :image="$image"
-        :size="medium"
-    />
+<div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+    <div class="flex-shrink-0">
+        <x-atoms.attachment-image
+            class="h-48 w-full object-cover"
+            :image="$image"
+            :size="large"
+            alt=""
+        />
+    </div>
 
-    <div class="card-body">
-        <h2 class="card-title">{{ $title }}</h2>
+    <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+        <div class="flex-1">
+            @if ($meta)
+                <p class="text-sm font-medium text-indigo-600">
+                    <a href="{{ $link }}" class="hover:underline">
+                        {{ $meta }}
+                    </a>
+                </p>
+            @endif
 
-        <p class="card-text">{{ $text }}</p>
+            <a href="{{ $link }}" class="block mt-2">
+                <p class="text-xl font-semibold text-gray-900">
+                    {{ $title }}
+                </p>
 
-        <a class="btn btn-primary" href="{{ $link }}">{{ $linkText }}</a>
+                <p class="mt-3 text-base text-gray-500">
+                    {{ $text }}
+                </p>
+            </a>
+        </div>
     </div>
 </div>

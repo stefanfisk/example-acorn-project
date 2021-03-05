@@ -1,7 +1,5 @@
 <x-layouts.app>
-    <div class="container">
-        <h1 class="display-1">Front Page!!!</h1>
-    </div>
+    <x-atoms.page-heading>Front Page!!!</x-atoms.page-heading>
 
     <x-organisms.loop />
 </x-layouts.app>

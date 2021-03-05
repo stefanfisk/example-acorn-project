@@ -5,16 +5,12 @@
             :message="__('Sorry, no results were found.', 'app')"
         />
     @else
-        <div class="container">
-            <div class="row">
-                @while(have_posts())
-                    @php(the_post())
+        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            @while(have_posts())
+                @php(the_post())
 
-                    <div class="col-sm-12 col-md-6 col-lg-4">
-                        <x-molecules.loop.post />
-                    </div>
-                @endwhile
-            </div>
+                <x-molecules.loop.post />
+            @endwhile
         </div>
     @endif
 </div>
