@@ -9,6 +9,7 @@
     },
     "license": "ISC",
     "scripts": {
+        "build": "mix",
         "watch": "mix watch",
         "lint": "run-p --continue-on-error --print-label --silent lint:*",
         "lint:css": "stylelint .",
@@ -19,11 +20,14 @@
         "fix:js": "eslint --fix .",
         "fix:php": "./vendor/bin/phpcbf -s ."
     },
-    "dependencies": {},
+    "dependencies": {
+        "@wordpress/dependency-extraction-webpack-plugin": "^3.0.1",
+        "bootstrap": "^4.6.0",
+        "popper.js": "^1.16.1"
+    },
     "devDependencies": {
         "@wordpress/eslint-plugin": "^8.0.2",
         "babel-eslint": "^10.1.0",
-        "bootstrap": "^4.6.0",
         "eslint": "^7.21.0",
         "eslint-config-airbnb": "^18.2.1",
         "eslint-config-prettier": "^8.1.0",
