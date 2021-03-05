@@ -86,6 +86,7 @@ return [
     |
     */
     'helpers' => [
+        'cx'             => 'App\View\classnames',
         'html'           => 'App\View\html',
         'push_postdata'  => 'App\push_postdata',
         'pop_postdata'   => 'App\pop_postdata',
