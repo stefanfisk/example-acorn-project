@@ -4,5 +4,4 @@ set -e
 
 cd $(dirname "$0")
 
-./docker-compose build --pull
 ./docker-compose up "$@"

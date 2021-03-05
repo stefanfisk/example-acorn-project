@@ -35,3 +35,5 @@ if ! grep -q wordpress.test /etc/hosts; then
 else
     echo "wordpress.test already exists in /etc/hosts"
 fi
+
+./docker-compose build --pull
